@@ -1,0 +1,11 @@
+/* Import fonts */
+
+@font-face {
+    font-family: 'helvetica-neue-black';
+    src: url(assets/fonts/helvetica-neue-black.otf);
+}
+
+@font-face {
+    font-family: 'helvetica-neue-bold';
+    src: url(assets/fonts/helvetica-neue-bold.otf);
+}
