@@ -2,10 +2,21 @@
 
 @font-face {
     font-family: 'helvetica-neue-black';
-    src: url(assets/fonts/helvetica-neue-black.otf);
+    src: url(../fonts/helvetica-neue-black.otf);
 }
 
 @font-face {
     font-family: 'helvetica-neue-bold';
-    src: url(assets/fonts/helvetica-neue-bold.otf);
+    src: url(../fonts/helvetica-neue-bold.otf);
+}
+
+html,
+body {
+    font-family: helvetica-neue-bold, sans-serif;
+}
+
+h1 {
+    font-family: helvetica-neue-black, sans-serif;
+    text-align: center;
+    font-size: 3em;
 }
