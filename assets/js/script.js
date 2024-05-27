@@ -9,6 +9,10 @@ function drawGrid(rows, cols) {
             let input = document.createElement('input')
             input.type = 'text';
             input.className = 'tile';
+            input.maxLength = 1; // Ensures input value is only 1 character long
+            input.addEventListener('input', function() {
+                this.value = this.value.toUpperCase();
+            }) // Ensures all input characters are capitalised
             gameBoard.appendChild(input);
         }
     }
