@@ -24,3 +24,18 @@ h1 {
 hr {
     width: 550px;
 }
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+}
+
+.tile {
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px solid #d3d6da;
+    margin: 2.5px;
+    font-size: 2em;
+    text-align: center;
+}
