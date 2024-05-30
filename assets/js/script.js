@@ -50,14 +50,18 @@ function drawGrid(rows, cols) {
 function checkGuess() {
     let gameBoard = document.getElementById('game-board');
     let inputValues = gameBoard.children;
-    let guess = '';
+    let userGuess = '';
+    let correctAnswer = randomWord();
+    let isCorrect = userGuess === correctAnswer[0];
+
     for (let i = 0; i < 5; i++) {
-        guess += inputValues[i].value;
+        userGuess += inputValues[i].value;
     }
-    // if guess.length < 5 {
-    //     alert('Not enough letters');
-    //     return;
-    // }
+    
+    if (guess.length < 5) {
+        alert('Not enough letters');
+        return;
+    }
 }
 
 // Call the function
@@ -85,3 +89,9 @@ function moveToNext() {
 }
 
 moveToNext();
+
+function randomWord() {
+  let ranIndex = Math.floor(Math.random() * words.length);
+  let randomWord = words[ranIndex];
+}
+randomWord();
