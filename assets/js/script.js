@@ -54,11 +54,34 @@ function checkGuess() {
     for (let i = 0; i < 5; i++) {
         guess += inputValues[i].value;
     }
-    if guess.length < 5 {
-        alert('Not enough letters');
-        return;
-    }
+    // if guess.length < 5 {
+    //     alert('Not enough letters');
+    //     return;
+    // }
 }
 
 // Call the function
 drawGrid(6, 5);
+
+/**
+ * Automatically moves to next input when letter is entered
+ * and goes back to previous value when backspace is entered
+ */
+function moveToNext() {
+  let inputs = document.getElementsByTagName('input');
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('input', function() {
+      if (inputs[i].value.length === 1 && i < inputs.length - 1) {
+        inputs[i + 1].focus();
+      }
+    })
+    inputs[i].addEventListener('keydown', function(event) {
+      if (event.key === 'Backspace' && inputs[i].value === '' && i > 0) {
+        inputs[i - 1].focus();
+      }
+    })
+  }
+}
+
+moveToNext();
